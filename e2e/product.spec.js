@@ -24,11 +24,18 @@ test.describe("Vitrine de produtos", () => {
     await productPage.selectProductByName(productName);
     await productPage.validateProductPage(productName);
 
-  
-    await productPage.selectSize("XS");
-    await productPage.selectColor("Blue");
+    await productPage.selectOptions();
 
-  
+    await productPage.validateAddToCartEnabled();
+  });
+  test("Deve selecionar todas as opções do produto", async ({ page }) => {
+    const productName = "Augusta Pullover Jacket";
+
+    await homePage.visitHomePage();
+    await productPage.selectProductByName(productName);
+    await productPage.validateProductPage(productName);
+
+    await productPage.selectOptions();
     await productPage.validateAddToCartEnabled();
   });
 });

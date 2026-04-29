@@ -15,7 +15,7 @@ export class MessageComponent {
   }
 
   async haveSuccessText(message) {
-    const toastMessageSuccess = this.page.locator(".woocommerce-message");
+    const toastMessageSuccess = this.page.locator('.woocommerce-message');
     await expect(toastMessageSuccess).toContainText(message);
   }
 }

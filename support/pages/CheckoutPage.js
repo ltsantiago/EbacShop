@@ -5,7 +5,7 @@ export class CheckoutPage {
     this.page = page;
   }
 
-  async validateCheckoutPage() {
-    await expect(this.page).toHaveURL(/checkout/);
+  async gotoCheckout() {
+    await this.page.goto("/checkout/");
   }
 }
