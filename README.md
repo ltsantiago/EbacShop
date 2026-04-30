@@ -81,13 +81,7 @@ Para executar testes específicos:
 npx playwright test tests/e2e/nome_do_arquivo.spec.ts
 ```
 
-Para executar com Arquivo start.sh
 
-```bash
-
-Em construção
-
-```
 
 ## 🔄 Pipeline CI/CD
 
@@ -137,6 +131,51 @@ ebacshop/
 └── test-results/              # Resultados de execuções (screenshots, vídeos etc.)
 
 ```
+
+## 📦 Desafio de Qualidade
+
+**Cenário:** “Às vezes, o cliente paga, mas o pedido não aparece na tela de ‘Meus Pedidos’.” Você não tem acesso ao código-fonte. Possui apenas acesso ao ambiente de produção, logs básicos e apoio dos times de Produto e Backend. 
+
+**Resposta**
+
+```bash
+Abordagem Inicial
+
+01 -Reprodução do problema de forma controlada em produção
+
+-Registrar o fluxo de ponta-ponta até o pagamento
+-Validar se o pagamento de fato foi aprovado
+-Em que momento do fluxo ele acontece
+-Verificar a tela de “Meus pedidos” para saber se algum problema de cachê ou atualização de retorno dos dados consumidos(Front-End)
+
+Redução da Incerteza
+
+02 - Analisar Logs
+
+-Verificar ID do pedido
+-Se a transação tem algum ID de pagamento
+-ID do usuário
+-Qual status code da response retornada
+-Qual payload foi enviado
+-Erro de timeout após pagamento
+
+03 - Colaboração com Back-End e Produto
+
+-Trabalhar junto com Backend e Produto para correlacionar dados e simular o fluxo juntamente e tentar identificar dependências assíncronas e possíveis falhas
+-Verificar frequência do problema
+-Quais as condições específicas que ocorre o problema?
+   Tipo de pagamento
+   Volume de dados
+   Horário
+   
+04 - Tentativa de Isolar a falha
+
+-Caso o pedido não exista: Passível de problema na integração verificar e alinhar com time de back-end
+-Caso o pedido exista, porém, não aparece para o usuário: Validar com o front-end se a API está sendo consumida.
+
+
+```
+
 
 
 ## 📄 Licença
