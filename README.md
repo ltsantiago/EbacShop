@@ -3,7 +3,7 @@
 
 
 [![Playwright](https://img.shields.io/badge/Playwright-2E3440?style=for-the-badge&logo=playwright&logoColor=#2EAD33)](https://playwright.dev/)
-[![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+[![Javascript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 [![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
 [![Yarn](https://img.shields.io/badge/Yarn-2C8EBB?style=for-the-badge&logo=yarn&logoColor=white)](https://yarnpkg.com/)
 
@@ -26,7 +26,7 @@ Este é um projeto de automação de testes end-to-end (E2E) para o site [EbacSh
 
 ## 📊 Roadmap de Automação
 
-<img width="1195" height="1330" alt="Image" src="https://github.com/user-attachments/assets/51a0088e-4e53-48f8-bb7e-d2cf1e4a54fd" />
+<img width="1195" height="1200" alt="Image" src="https://github.com/user-attachments/assets/51a0088e-4e53-48f8-bb7e-d2cf1e4a54fd" />
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -115,6 +115,11 @@ https://github.com/user-attachments/assets/cb19d44d-9248-4fe9-9219-e21054b733e5
 <img width="1902" height="1041" alt="Image" src="https://github.com/user-attachments/assets/c551805f-d71f-4156-a81f-323a22657f4b" />
 
 
+## 🔗 Breve Apresentação do Trabalho - Mostrando os conceitos utilizados
+
+<img width="1900" height="859" alt="Image" src="https://github.com/user-attachments/assets/242c2a46-54d1-4058-a2be-6cbc5f75ed3f" /><br><br>
+
+Video sobre: https://drive.google.com/file/d/1WGlC3Aiph7yKg6xJXOEwcLJvJQfdueUt/view?usp=sharing
 
 ## 🏗️ Estrutura do Projeto
 
