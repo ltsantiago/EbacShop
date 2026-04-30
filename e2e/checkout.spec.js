@@ -21,13 +21,10 @@ test.describe("Checkout", () => {
   });
 
   test("Deve estar na tela de checkout", async ({ page }) => {
-    // Já estamos com o fluxo até a tela de checkout via beforeEach
-    // Caso queira validar algo extra aqui, adicione asserções específicas
     await expect(page).toHaveURL(/checkout/);
   });
 
   test("Deve realizar o pagamento via cheque com sucesso", async ({ page }) => {
-    // Fluxo de pagamento — o setup já colocou o produto no carrinho e navegou até checkout
     await page.checkout.fillCheckoutForm();
     await page.checkout.haveOrderReceivedMessage();
   });

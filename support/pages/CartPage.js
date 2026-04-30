@@ -1,3 +1,4 @@
+import { vi } from "@faker-js/faker";
 import { expect } from "@playwright/test";
 
 export class CartPage {
@@ -34,8 +35,9 @@ export class CartPage {
 
   async updateQuantity() {
     await this.page.getByRole("spinbutton", { name: "Qty" }).click();
+    await this.page.waitForTimeout(1000);
     await this.page.getByRole("spinbutton", { name: "Qty" }).fill("5");
-    await this.page.getByRole("button", { name: "Update Cart" }).click();
+    await this.page.getByRole("button", { name: "Update Cart", visible: true }).click();
   }
 
   async checkButtonCheckout() {

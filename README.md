@@ -26,7 +26,7 @@ Este é um projeto de automação de testes end-to-end (E2E) para o site [EbacSh
 
 ## 📊 Roadmap de Automação
 
-Em construção
+
 
 ## 🚀 Tecnologias Utilizadas
 

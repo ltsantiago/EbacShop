@@ -16,7 +16,7 @@ export class ProductPage {
   }
 
   async selectOptions() {
-    await this.page.waitForTimeout(2000);
+    await this.page.waitForTimeout(3000);
     await this.page
       .locator('button:has-text("XS"), .size-option, [data-value="XS"]')
       .first()
