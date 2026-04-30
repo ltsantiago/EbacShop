@@ -178,6 +178,13 @@ Redução da Incerteza
 
 ```
 
+## 📦 Análise de Qualidade
+
+Para leitura do documento:
+
+```bash
+Pasta evidencias no projeto com nome do arquivo: "Analise de Qualidade.pdf"
+```
 
 
 ## 📄 Licença
