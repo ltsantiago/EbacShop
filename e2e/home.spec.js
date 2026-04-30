@@ -1,10 +1,6 @@
-// @ts-check
-import { test, expect } from '@playwright/test';
-import { HomePage } from '../support/pages/HomePage';
+import { test, expect} from "../support/index";
 
 test('Deve acessar a página inicial', async ({ page }) => {
-  const homePage = new HomePage(page);
-  await homePage.visitHomePage();
- 
+  await page.home.visitHomePage();
 });
 

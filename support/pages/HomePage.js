@@ -9,9 +9,4 @@ export class HomePage {
     await this.page.goto("/");
     await expect(this.page).toHaveTitle(/EBAC/);
   }
-
-  //   async selectProductByName(productName) {
-  //     const productLink = this.page.locator('.product-block').first().locator('a');
-  //     await productLink.click();
-  //   }
 }

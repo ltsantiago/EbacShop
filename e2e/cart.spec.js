@@ -1,83 +1,46 @@
-import { test} from "@playwright/test";
-import { CartPage } from "../support/pages/CartPage";
-import { HomePage } from "../support/pages/HomePage";
-import { ProductPage } from "../support/pages/ProductPage";
-import { MessageComponent } from "../support/pages/Components";
-import { LoginPage } from "../support/pages/LoginPage";
-
-let homePage;
-let productPage;
-let cartPage;
-let messageComponent;
-let loginPage;
-
-test.beforeEach(async ({ page }) => {
-  homePage = new HomePage(page);
-  productPage = new ProductPage(page);
-  cartPage = new CartPage(page);
-  messageComponent = new MessageComponent(page);
-  loginPage = new LoginPage(page);
-});
+import { test, expect } from "../support/index";
+import { formatProductName } from "../support/utils/formatter";
 
 test.describe("Carrinho de compras", () => {
+  const productName = "Josie Yoga Jacket";
   test("Deve adicionar produto ao carrinho", async ({ page }) => {
-    await homePage.visitHomePage();
-
-    const productName = "Augusta Pullover Jacket";
-
-    await productPage.selectProductByName(productName);
-    await productPage.validateProductPage(productName);
-
-    await page.waitForTimeout(2000);
-    await productPage.selectOptions();
-
-
-    await cartPage.addCart();
-
-    
-    const successMessage = `foi adicionado no seu carrinho.`;
-    await messageComponent.haveSuccessText(successMessage);
+    await page.home.visitHomePage();
+    await page.products.selectProductByName(productName);
+    await page.products.validateProductPage(productName);
+    await page.products.selectOptions();
+    await page.cart.addCart();
+    const successMessage = formatProductName(productName);
+    await page.message.haveSuccessText(successMessage);
   });
 
   test("Deve adicionar produto e acessar a tela do carrinho", async ({
     page,
   }) => {
-     await homePage.visitHomePage();
+    await page.home.visitHomePage();
 
-    const productName = "Josie Yoga Jacket";
+    await page.products.selectProductByName(productName);
+    await page.products.validateProductPage(productName);
 
-    await productPage.selectProductByName(productName);
-    await productPage.validateProductPage(productName);
-
-    await page.waitForTimeout(2000);
-    await productPage.selectOptions();
-    await cartPage.addCart();
-    const successMessage = `foi adicionado no seu carrinho.`;
-    await messageComponent.haveSuccessText(successMessage);
-    await cartPage.checkButtonCart();
+    await page.products.selectOptions();
+    await page.cart.addCart();
+    const successMessage = formatProductName(productName);
+    await page.message.haveSuccessText(successMessage);
+    await page.cart.checkButtonCart();
   });
 
   test("Deve alterar a quantidade de item no carrinho", async ({ page }) => {
-  
-    //Adicionar produto no carrinho
-    await homePage.visitHomePage();
+    await page.home.visitHomePage();
+    await page.products.selectProductByName(productName);
+    await page.products.validateProductPage(productName);
 
-    const productName = "Josie Yoga Jacket";
+    await page.products.selectOptions();
+    await page.cart.addCart();
+    const successMessage = formatProductName(productName);
+    await page.message.haveSuccessText(successMessage);
+    await page.cart.checkButtonCart();
 
-    await productPage.selectProductByName(productName);
-    await productPage.validateProductPage(productName);
-
-    await page.waitForTimeout(2000);
-    await productPage.selectOptions();
-    await cartPage.addCart();
-    const successMessage = `foi adicionado no seu carrinho.`;
-    await messageComponent.haveSuccessText(successMessage);
-    await cartPage.checkButtonCart();
-
-    //Alterar quantidade do item
-    await cartPage.updateQuantity();
+    await page.cart.updateQuantity();
     const successMessageUpdate = `Carrinho atualizado.`;
-    await messageComponent.haveSuccessText(successMessageUpdate);
-    await page.waitForTimeout(2000);
+    await page.message.haveSuccessText(successMessageUpdate);
   });
 });

@@ -39,7 +39,9 @@ export class CartPage {
   }
 
   async checkButtonCheckout() {
-    const checkoutButton = this.page.getByRole("link", { name: "Concluir compra" });
+    const checkoutButton = this.page.getByRole("link", {
+      name: "Concluir compra",
+    });
     await expect(checkoutButton).toBeVisible();
     await checkoutButton.click();
     await expect(this.page).toHaveURL(/checkout/);

@@ -1,6 +1,5 @@
 import { expect } from "@playwright/test";
 
-
 export class ProductPage {
   constructor(page) {
     this.page = page;
@@ -17,24 +16,29 @@ export class ProductPage {
   }
 
   async selectOptions() {
-  await this.page.locator('button:has-text("XS"), .size-option, [data-value="XS"]').first().dblclick();
-  await this.page.locator('button:has-text("Blue"), .color-option, [data-value="Blue"]').first().dblclick();
+    await this.page.waitForTimeout(2000);
+    await this.page
+      .locator('button:has-text("XS"), .size-option, [data-value="XS"]')
+      .first()
+      .dblclick();
+    await this.page
+      .locator('button:has-text("Blue"), .color-option, [data-value="Blue"]')
+      .first()
+      .dblclick();
   }
 
-  
-
   async selectSize(size) {
-    const sizeOption =  this.page.locator(`[data-title="${size}"]`);
+    const sizeOption = this.page.locator(`[data-title="${size}"]`);
     await sizeOption.click();
   }
 
   async selectColor(color) {
-  const option = this.page.locator(`[data-title="${color}"]`)
-  await option.click();
-}
+    const option = this.page.locator(`[data-title="${color}"]`);
+    await option.click();
+  }
 
- async validateAddToCartEnabled() {
-   const enableButton = this.page.getByRole('button', { name: 'Comprar' });
-   await expect(enableButton).toBeEnabled();
- }
+  async validateAddToCartEnabled() {
+    const enableButton = this.page.getByRole("button", { name: "Comprar" });
+    await expect(enableButton).toBeEnabled();
+  }
 }
