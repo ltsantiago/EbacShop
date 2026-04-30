@@ -134,7 +134,8 @@ ebacshop/
 
 ## 📦 Desafio de Qualidade
 
-**Cenário:** “Às vezes, o cliente paga, mas o pedido não aparece na tela de ‘Meus Pedidos’.” Você não tem acesso ao código-fonte. Possui apenas acesso ao ambiente de produção, logs básicos e apoio dos times de Produto e Backend. </br>
+**Cenário:** “Às vezes, o cliente paga, mas o pedido não aparece na tela de ‘Meus Pedidos’.” Você não tem acesso ao código-fonte. Possui apenas acesso ao ambiente de produção, logs básicos e apoio dos times de Produto e Backend.
+
 **Pergunta:** Qual seria sua primeira ação para investigar esse problema e por quê? Detalhe sua hipótese inicial e como reduziria a incerteza rapidamente
 
 **Resposta**
