@@ -60,6 +60,7 @@ Este é um projeto de automação de testes end-to-end (E2E) para o site [EbacSh
 3. Configure as variáveis de ambiente (se necessário):
    Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis:
    ```
+   BASE_URL
    USERFULL=
    PASSWORD=
    ```
@@ -90,7 +91,7 @@ npx playwright test tests/e2e/nome_do_arquivo.spec.ts
 
 ✅ Integração com Pipeline CI/CD **GitHub Actions**
 
-Em construção
+https://github.com/user-attachments/assets/988627ac-451d-44af-b737-e6983f3805db
 
 ## 📊 Relatórios e Evidências
 
