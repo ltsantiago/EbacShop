@@ -53,7 +53,9 @@ export class CheckoutPage {
   }
 
   async haveOrderReceivedMessage() {
-    const orderReceivedMessage = this.page.locator(".woocommerce-thankyou-order-received");
+    const orderReceivedMessage = this.page.locator(
+      ".woocommerce-thankyou-order-received",
+    );
     await expect(orderReceivedMessage).toBeVisible();
     await expect(this.page).toHaveURL(/order-received/);
   }
