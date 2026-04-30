@@ -26,6 +26,7 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['dot'],
+    ['html', { open: 'never' }],
     ['playwright-tesults-reporter', {'tesults-target': process.env.TOKEN}]
   ],
   
@@ -35,7 +36,7 @@ export default defineConfig({
     baseURL: process.env.BASE_URL || 'http://lojaebac.ebaconline.art.br',
     headless: true,
     video: 'on',
-    screenshot: 'on',
+    screenshot: 'only-on-failure',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
