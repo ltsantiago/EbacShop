@@ -26,7 +26,7 @@ Este é um projeto de automação de testes end-to-end (E2E) para o site [EbacSh
 
 ## 📊 Roadmap de Automação
 
-
+<img width="1195" height="1330" alt="Image" src="https://github.com/user-attachments/assets/51a0088e-4e53-48f8-bb7e-d2cf1e4a54fd" />
 
 ## 🚀 Tecnologias Utilizadas
 
@@ -47,7 +47,7 @@ Este é um projeto de automação de testes end-to-end (E2E) para o site [EbacSh
 1. Clone o repositório:
    ```bash
    git clone [URL_DO_REPOSITÓRIO]
-   cd Saucedemo
+   cd ebacshop
    ```
 
 2. Instale as dependências:
@@ -106,20 +106,20 @@ Após a execução dos testes, você pode visualizar os relatórios gerados em:
 - Vídeos: `test-results/`
 
   
-🔗 Modo de interface do usuário (UI)
+## 🔗 Modo de interface do usuário (UI)
 
-Em construção
+https://github.com/user-attachments/assets/cb19d44d-9248-4fe9-9219-e21054b733e5
 
-🔗 Integração com Tesults
+## 🔗 Integração com Tesults
 
-Em construção
+<img width="1902" height="1041" alt="Image" src="https://github.com/user-attachments/assets/c551805f-d71f-4156-a81f-323a22657f4b" />
 
 
 
 ## 🏗️ Estrutura do Projeto
 
 ```
-Saucedemo/
+ebacshop/
 ├── .github/                  # Configurações do GitHub, workflows de CI
 ├── tests/
 │   ├── e2e/                  # Testes end-to-end
@@ -140,6 +140,6 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 ## ✉️ Contato
 
-Seu Nome - [@seu_usuario](https://github.com/ltsantiago) - Seu emai: ltsantiago88@gmail.com
+Seu Nome - [ltsantiago](https://github.com/ltsantiago) - Seu emai: ltsantiago88@gmail.com
 
 [⬆ Voltar ao topo](#-saucedemo-e2e-test-automation)
