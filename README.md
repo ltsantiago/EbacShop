@@ -183,7 +183,7 @@ Redução da Incerteza
 Para leitura do documento:
 
 ```bash
-Pasta evidencias no projeto com nome do arquivo: "Analise de Qualidade.pdf"
+Encontra-se dentro pasta **evidencias** no repositorio com nome : "Analise de Qualidade.pdf"
 ```
 
 
