@@ -37,4 +37,11 @@ export class CartPage {
     await this.page.getByRole("spinbutton", { name: "Qty" }).fill("5");
     await this.page.getByRole("button", { name: "Update Cart" }).click();
   }
+
+  async checkButtonCheckout() {
+    const checkoutButton = this.page.getByRole("link", { name: "Concluir compra" });
+    await expect(checkoutButton).toBeVisible();
+    await checkoutButton.click();
+    await expect(this.page).toHaveURL(/checkout/);
+  }
 }
